@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container, .nav-container, .footer-content, .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+nav {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background: #1e3c72;
+    color: white;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    padding: 0;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    height: 450px; /* Tinggi tetap untuk gambar */
+    overflow: hidden;
+}
+
+.hero .rs-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    filter: brightness(60%); /* Meredupkan gambar agar teks lebih jelas */
+    transition: transform 0.5s;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #ee5a5a;
+    transform: translateY(-2px);
+}
+
+/* --- Main Container & Sections --- */
+.container {
+    padding: 3rem 20px;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section h2 {
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 3px solid #1e3c72;
+    padding-bottom: 0.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 3rem 0;
+}
+
+/* Vision Mission */
+.vision-mission {
+    background: #e8eaf6; /* Warna latar belakang yang lembut */
+    padding: 2.5rem;
+    border-radius: 10px;
+}
+
+.vision-mission h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.vision-mission ul {
+    list-style: none; /* Menghapus bullet default */
+}
+
+.vision-mission ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+}
+
+.vision-mission ul li::before {
+    content: '✅'; /* Mengganti bullet dengan emoji checkmark */
+    position: absolute;
+    left: 0;
+    color: #2a5298;
+}
+
+/* Emergency Contact */
+.emergency {
+    background: #ff6b6b;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.emergency h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.emergency p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #1e3c72;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.service-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.service-card a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.service-card a:hover {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+/* Alur Pendaftaran */
+.alur-pendaftaran {
+    background: #f8f9fa; 
+    padding: 2rem; 
+    border-radius: 10px;
+}
+.alur-pendaftaran ol {
+    list-style-type: decimal;
+    line-height: 1.8;
+    color: #555;
+    padding-left: 20px;
+}
+
+/* Jadwal Tabel */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.jadwal-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.jadwal-tabel thead tr {
+    background: #1e3c72;
+    color: white;
+}
+
+.jadwal-tabel th, .jadwal-tabel td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.jadwal-tabel tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.jadwal-tabel tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Rawat Inap Details */
+.rawat-inap-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border-left: 5px solid #ff6b6b;
+}
+
+.rawat-inap-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.rawat-inap-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.rawat-inap-col h4 {
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+.rawat-inap-col ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.rawat-inap-col ul li {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Kebijakan Grid */
+.kebijakan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.kebijakan-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.kebijakan-card h3 {
+    color: #2a5298;
+    margin-bottom: 1rem;
+}
+
+.kebijakan-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Kontak Info */
+.kontak-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    background: #f8f9fa; 
+    padding: 2rem; 
+    border-radius: 10px;
+}
+
+.kontak-info h3 {
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* --- Footer --- */
+footer {
+    background: #1e3c72;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #ff6b6b;
+}
+
+.footer-note {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    opacity: 0.8;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .rawat-inap-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 0.8rem 1rem;
+    }
+
+    .hero-image-container {
+        height: 350px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 2rem 15px;
+    }
+
+    .section h2 {
+        font-size: 1.7rem;
+    }
+    /* Services Grid (Gaya yang sudah ada) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Rawat Inap Details (Gaya yang sudah ada) */
+.rawat-inap-card {
+    /* ... style yang sudah ada ... */
+    margin-bottom: 2rem;
+}
+
+.rawat-inap-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* NEW: Gaya untuk Detail Layanan (Poli dan Lab) */
+.layanan-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.layanan-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-top: 5px solid #ff6b6b;
+    transition: transform 0.2s;
+}
+
+.layanan-card:hover {
+    transform: translateY(-3px);
+}
+
+.layanan-card h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.layanan-card ul {
+    list-style: none; /* Menghilangkan bullet default */
+    padding-left: 0;
+}
+
+.layanan-card ul li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.layanan-card ul li::before {
+    content: '•'; /* Menggunakan bullet kustom */
+    color: #ff6b6b;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.fasilitas-penunjang-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+}
